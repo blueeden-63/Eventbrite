@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Nouvelle participation à votre événement!</h1>
+    
+    <p>Bonjour <%= @admin.first_name %>,</p>
+    
+    <p>
+      <%= @user.first_name %> <%= @user.last_name %> vient de s'inscrire à votre événement:
+    </p>
+    
+    <h2><%= @event.title %></h2>
+    
+    <p>
+      <strong>Participant:</strong> <%= @user.first_name %> <%= @user.last_name %><br/>
+      <strong>Email:</strong> <%= @user.email %><br/>
+      <strong>Événement:</strong> <%= @event.title %><br/>
+      <strong>Date:</strong> <%= @event.start_date.strftime("%d/%m/%Y à %H:%M") %><br/>
+      <strong>Lieu:</strong> <%= @event.location %>
+    </p>
+    
+    <p>
+      Vous avez maintenant <%= @event.users.count %> participant(s) inscrit(s) à cet événement.
+    </p>
+    
+    <p>À bientôt!</p>
+    
+    <p>
+      L'équipe Eventbrite<br/>
+      <em>Ne réponds pas à cet email, il est automatique</em>
+    </p>
+  </body>
+</html>

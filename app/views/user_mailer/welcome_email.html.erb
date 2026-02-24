@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bienvenue sur Eventbrite, <%= @user.first_name %>!</h1>
+    
+    <p>Nous sommes ravi de te voir rejoindre notre plateforme d'événements.</p>
+    
+    <p>
+      Tu t'es inscrit avec l'email suivant: <strong><%= @user.email %></strong>
+    </p>
+    
+    <p>
+      Grâce à Eventbrite, tu peux maintenant:
+    </p>
+    <ul>
+      <li>Créer et gérer tes propres événements</li>
+      <li>Découvrir les événements organisés par d'autres</li>
+      <li>Participer à des événements qui t'intéressent</li>
+    </ul>
+    
+    <p>
+      Pour commencer, connecte-toi à ton compte: 
+      <%= link_to 'Se connecter', @url %>
+    </p>
+    
+    <p>À très bientôt sur Eventbrite!</p>
+    
+    <p>
+      L'équipe Eventbrite<br/>
+      <em>Ne réponds pas à cet email, il est automatique</em>
+    </p>
+  </body>
+</html>

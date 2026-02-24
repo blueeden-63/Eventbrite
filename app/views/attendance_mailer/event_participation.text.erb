@@ -1,0 +1,21 @@
+Nouvelle participation à votre événement!
+==========================================================
+
+Bonjour <%= @admin.first_name %>,
+
+<%= @user.first_name %> <%= @user.last_name %> vient de s'inscrire à votre événement.
+
+Détails:
+
+Événement: <%= @event.title %>
+Participant: <%= @user.first_name %> <%= @user.last_name %>
+Email: <%= @user.email %>
+Date: <%= @event.start_date.strftime("%d/%m/%Y à %H:%M") %>
+Lieu: <%= @event.location %>
+
+Vous avez maintenant <%= @event.users.count %> participant(s) inscrit(s) à cet événement.
+
+À bientôt!
+
+L'équipe Eventbrite
+Ne réponds pas à cet email, il est automatique
