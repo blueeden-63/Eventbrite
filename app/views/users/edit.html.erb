@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="col-md-6 mx-auto">
+    <h2>Modifier mon profil</h2>
+    
+    <%= form_with(model: @user, local: true) do |f| %>
+      <div class="mb-3">
+        <%= f.label :first_name, "Prénom" %>
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :last_name, "Nom" %>
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :description, "Description" %>
+        <%= f.text_area :description, class: "form-control", rows: 4 %>
+      </div>
+
+      <%= f.submit "Sauvegarder", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

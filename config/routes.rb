@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   }
 
   #Page d'acceuil
-  root 'home_pages#index'
+  root 'events#index'
 
   #Users - only accept numeric IDs to avoid conflicts with Devise routes
   resources :users, only: [:show], constraints: { id: /\d+/ }
