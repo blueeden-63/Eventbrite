@@ -11,10 +11,6 @@
           <p><strong>Description:</strong> <%= @user.description || "Non renseignée" %></p>
           
           <%= link_to "Modifier email/mot de passe", edit_user_registration_path, class: "btn btn-primary mt-3" %>
-          <%= link_to "Modifier profil", edit_user_path(@user), class: "btn btn-secondary mt-3" %>
-        </div>
-      </div>
-
       <h3 class="mt-5">Mes événements</h3>
       <% if @user.events.any? %>
         <ul class="list-group mt-3">
